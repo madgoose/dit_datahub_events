@@ -1,0 +1,138 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  {% include "includes/breadcrumb_examples.html" %}
+
+  <form action="/docs/tutorials-and-examples" method="post" class="form">
+
+    <h1 class="form-title heading-large">
+      Add new event
+    </h1>
+
+    <!-- Event name -->
+    <div class="form-group">
+      <label class="form-label-bold" for="event-name">Event name</label>
+      <!-- <p class="form-hint"></p> -->
+      <input type="text" class="form-control" id="event-name">
+    </div>
+
+
+    <!-- Event type -->
+    <div class="form-group">
+      <label class="form-label-bold" for="event-type">Event type</label>
+      <!-- <p class="form-hint">Start typing to see available options</p> -->
+      <input type="text" class="form-control" id="event-type">
+    </div>
+
+
+    <h2 class="form-label-bold">Reference number</h2>
+    <p>E130117-15</p>
+
+    <!-- Event start date -->
+    <div class="form-group">
+      <fieldset>
+        <legend class="form-label-bold">Event start date</legend>
+
+        <div class="form-date">
+
+          <p class="form-hint">For example, 31 3 2017</p>
+
+          <div class="form-group form-group-day">
+            <label for="event-start-day">Day</label>
+            <input class="form-control" id="event-start-day" type="number" pattern="[0-9]*" min="0" max="31">
+          </div>
+
+          <div class="form-group form-group-month">
+            <label for="event-start-month">Month</label>
+            <input class="form-control" id="event-start-month" type="number" pattern="[0-9]*" min="0" max="12">
+          </div>
+
+          <div class="form-group form-group-year">
+            <label for="event-start-year">Year</label>
+            <input class="form-control" id="event-start-year" type="number" pattern="[0-9]*" min="0" max="2014">
+          </div>
+
+          <a href="#" style="display:block; margin-top:60px;">Today's date</a>
+        </div>
+
+
+
+      </fieldset>
+    </div>
+
+    <h2 class="form-label-bold">
+      Does the event run for longer than 1 day?
+    </h2>
+
+    <div class="form-group">
+      <fieldset>
+
+        <legend class="visuallyhidden">
+          Does the event run for longer than 1 day?
+        </legend>
+
+        <label class="block-label" for="radio-other-address">
+          <input id="radio-other-address" type="radio" name="radio-indent-group" value="No">
+          No
+        </label>
+
+        <label class="block-label" for="radio-home-address" data-target="example-other-address">
+          <input id="radio-home-address" type="radio" name="radio-indent-group" value="Yes">
+          Yes
+        </label>
+
+        <div class="panel panel-border-narrow js-hidden" id="example-other-address">
+
+          <h2 class="form-label-bold">
+            Event end date
+          </h2>
+
+
+    <!-- Event end date -->
+    <div class="form-group">
+      <fieldset>
+        <legend class="form-label-bold visuallyhidden">Event end date</legend>
+
+        <div class="form-date">
+
+          <!-- <p class="form-hint">For example, 31 3 2017</p> -->
+
+          <div class="form-group form-group-day">
+            <label for="event-end-day">Day</label>
+            <input class="form-control" id="event-end-day" type="number" pattern="[0-9]*" min="0" max="31">
+          </div>
+
+          <div class="form-group form-group-month">
+            <label for="event-end-month">Month</label>
+            <input class="form-control" id="event-end-month" type="number" pattern="[0-9]*" min="0" max="12">
+          </div>
+
+          <div class="form-group form-group-year">
+            <label for="event-end-year">Year</label>
+            <input class="form-control" id="event-end-year" type="number" pattern="[0-9]*" min="0" max="2014">
+          </div>
+        </div>
+
+      </fieldset>
+    </div>
+
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Continue">
+    </div>
+
+  </main>
+
+  {% endblock %}
+
+
