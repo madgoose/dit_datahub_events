@@ -1,64 +1,70 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  GOV.UK prototype kit
+GOV.UK prototype kit
 {% endblock %}
 
 {% block content %}
 
 <main id="content" role="main">
-  <div class="grid-row">
-    <div class="column-two-thirds">
+	{% include "includes/phase_banner_demo.html" %}
 
-      <h1 class="heading-xlarge">
-        The GOV.UK prototype kit
-        <span class="heading-secondary">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
-      <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
-      </p>
+	{% include "includes/login_bar.html" %}
 
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
+	<div class="container">
 
-      <h2 class="heading-medium">About this page</h2>
 
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
+		<form class="searchbar"
+		action="/search"
+		method="get"
+		role="search">
+		<div class="searchbar__wrapper">
+			<label class="searchbar__label" for="search-term">Search for company name or contact</label>
+			<input class="searchbar__input form-control"
+			id="search-term"
+			type="search"
+			name="term"
+			value=""
+			placeholder="Search for company name or contact"
+			/>
+			<input class="searchbar__submit" type="submit" value="Search" />
+		</div>
+	</form>
 
-			<h2 class="heading-medium">Examples and documentation</h2>
+	<div class="grid-row dashboard">
 
-			<ul class="list list-bullet">
-				<li><a href="/docs/tutorials-and-examples">Example pages and documentation</a></li>
-				<li><a href="https://github.com/alphagov/govuk_prototype_kit">GitHub</a></li>
-			</ul>
+		<div class="column-half">
+			<div class="dashboard-section">
+				<h2 class="dashboard-section-title">Interactions</h2>
 
-      <h2 class="heading-medium">Other resources</h2>
 
-			<ul class="list list-bullet">
-				<li>
-					<a href="https://govuk-elements.herokuapp.com/snippets/">
-						Guide to GOV.UK Elements
-					</a>
-				</li>
-				<li>
-					<a href="https://www.gov.uk/service-manual">
-						Service design manual
-					</a>
-				</li>
-				<li>
-					<a href="https://www.gov.uk/design-principles">
-						Government Digital Service Design Principles
-					</a>
-				</li>
-			</ul>
+				<p class="dashboard-section-intro">
+					No interactions have been added in the last 15 days
+				</p>
 
-    </div>
-  </div>
+			</div>
+		</div>
+
+		<div class="column-half">
+
+			<div class="dashboard-section">
+				<h2 class="dashboard-section-title">Contacts</h2>
+
+
+
+				<p class="dashboard-section-intro">
+					No contacts have been added in the last 15 days
+				</p>
+
+
+
+			</div>
+
+		</div>
+	</div>
+
+</div>
 </main>
 
 {% endblock %}
-
 

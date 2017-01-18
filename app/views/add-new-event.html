@@ -6,9 +6,16 @@ GOV.UK prototype kit
 
 {% block content %}
 
-<main id="content" role="main">
 
-  {% include "includes/breadcrumb_examples.html" %}
+
+<main id="content" role="main">
+  {% include "includes/phase_banner_demo.html" %}
+
+  {% include "includes/login_bar.html" %}
+
+  <!-- {% include "includes/breadcrumb_examples.html" %} -->
+  <a href="#" class="link-back">Back to events list</a>
+
 
   <form action="/docs/tutorials-and-examples" method="post" class="form">
 
@@ -23,14 +30,15 @@ GOV.UK prototype kit
       <input type="text" class="form-control" id="event-name">
     </div>
 
-
     <!-- Event type -->
     <div class="form-group">
       <label class="form-label-bold" for="event-type">Event type</label>
-      <!-- <p class="form-hint">Start typing to see available options</p> -->
-      <input type="text" class="form-control" id="event-type">
+      <select class="form-control" id="event-type">
+        <option>Event type 1</option>
+        <option>Event type 2</option>
+        <option>Event type 3</option>
+      </select>
     </div>
-
 
     <h2 class="form-label-bold">Reference number</h2>
     <p>E130117-15</p>
@@ -60,9 +68,8 @@ GOV.UK prototype kit
           </div>
 
           <a href="#" style="display:block; margin-top:60px;">Today's date</a>
+
         </div>
-
-
 
       </fieldset>
     </div>
@@ -72,20 +79,20 @@ GOV.UK prototype kit
     </h2>
 
     <div class="form-group">
-      <fieldset>
+      <fieldset class="inline">
 
         <legend class="visuallyhidden">
           Does the event run for longer than 1 day?
         </legend>
 
-        <label class="block-label" for="radio-other-address">
-          <input id="radio-other-address" type="radio" name="radio-indent-group" value="No">
-          No
-        </label>
-
         <label class="block-label" for="radio-home-address" data-target="example-other-address">
           <input id="radio-home-address" type="radio" name="radio-indent-group" value="Yes">
           Yes
+        </label>
+
+        <label class="block-label" for="radio-other-address">
+          <input id="radio-other-address" type="radio" name="radio-indent-group" value="No">
+          No
         </label>
 
         <div class="panel panel-border-narrow js-hidden" id="example-other-address">
@@ -95,44 +102,172 @@ GOV.UK prototype kit
           </h2>
 
 
-    <!-- Event end date -->
-    <div class="form-group">
-      <fieldset>
-        <legend class="form-label-bold visuallyhidden">Event end date</legend>
+          <!-- Event end date -->
+          <div class="form-group">
+            <fieldset>
+              <legend class="form-label-bold visuallyhidden">Event end date</legend>
 
-        <div class="form-date">
+              <div class="form-date">
 
-          <!-- <p class="form-hint">For example, 31 3 2017</p> -->
+                <!-- <p class="form-hint">For example, 31 3 2017</p> -->
 
-          <div class="form-group form-group-day">
-            <label for="event-end-day">Day</label>
-            <input class="form-control" id="event-end-day" type="number" pattern="[0-9]*" min="0" max="31">
+                <div class="form-group form-group-day">
+                  <label for="event-end-day">Day</label>
+                  <input class="form-control" id="event-end-day" type="number" pattern="[0-9]*" min="0" max="31">
+                </div>
+
+                <div class="form-group form-group-month">
+                  <label for="event-end-month">Month</label>
+                  <input class="form-control" id="event-end-month" type="number" pattern="[0-9]*" min="0" max="12">
+                </div>
+
+                <div class="form-group form-group-year">
+                  <label for="event-end-year">Year</label>
+                  <input class="form-control" id="event-end-year" type="number" pattern="[0-9]*" min="0" max="2014">
+                </div>
+              </div>
+
+            </fieldset>
           </div>
 
-          <div class="form-group form-group-month">
-            <label for="event-end-month">Month</label>
-            <input class="form-control" id="event-end-month" type="number" pattern="[0-9]*" min="0" max="12">
-          </div>
-
-          <div class="form-group form-group-year">
-            <label for="event-end-year">Year</label>
-            <input class="form-control" id="event-end-year" type="number" pattern="[0-9]*" min="0" max="2014">
-          </div>
         </div>
-
       </fieldset>
     </div>
 
-        </div>
-      </fieldset>
+    <!-- Event notes -->
+    <div class="form-group">
+      <label class="form-label-bold" for="event-notes">Event notes (optional)</label>
+      <!-- <p class="form-hint">Start typing to see available options</p> -->
+      <input type="text" class="form-control" id="event-notes">
     </div>
+
+
+    <h2 class="form-label-bold">
+      Is this a webinar?
+    </h2>
 
     <div class="form-group">
-      <input type="submit" class="button" value="Continue">
-    </div>
+      <fieldset class="inline">
 
-  </main>
+        <legend class="visuallyhidden">
+          Is this a webinar?
+        </legend>
 
-  {% endblock %}
+        <label class="block-label" for="radio-webinar-yes" data-target="webinar-more">
+          <input id="radio-webinar-yes" type="radio" name="radio-indent-group" value="Yes">
+          Yes
+        </label>
+
+        <label class="block-label" for="radio-webinar-no">
+          <input id="radio-webinar-no" type="radio" name="radio-indent-group" value="No">
+          No
+        </label>
+
+        <div class="panel panel-border-narrow js-hidden" id="webinar-more">
+
+          <!-- Webinar URL -->
+          <div class="form-group">
+            <fieldset>
+              <legend class="form-label-bold visuallyhidden">Webinar URL</legend>
+              <!-- Event name -->
+              <div class="form-group">
+                <label class="form-label-bold" for="webinar-url">Webinar URL</label>
+                <!-- <p class="form-hint"></p> -->
+                <input type="text" class="form-control" id="webinar-url">
+              </div>
+
+            </fieldset>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Event name -->
+      <div class="form-group">
+        <label class="form-label-bold" for="event-teams">DIT team(s)</label>
+        <!-- <p class="form-hint"></p> -->
+        <input type="text" class="form-control" id="event-teams" value="Your team name shown here">
+        <p>
+          <a href="#">Add another team</a>
+        </p>
+      </div>
+
+
+
+      <h2 class="form-label-bold">
+        Is this event happening in the UK?
+      </h2>
+
+      <div class="form-group">
+        <fieldset class="inline">
+
+          <legend class="visuallyhidden">
+            Is this event happening in the UK?
+          </legend>
+
+          <label class="block-label" for="event-in-uk-yes" data-target="event-uk">
+            <input id="event-in-uk-yes" type="radio" name="radio-indent-group" value="Yes">
+            Yes
+          </label>
+
+          <label class="block-label" for="event-in-uk-no" data-target="event-overseas">
+            <input id="event-in-uk-no" type="radio" name="radio-indent-group" value="No">
+            No
+          </label>
+
+          <div class="panel panel-border-narrow js-hidden" id="event-uk">
+
+            <!-- UK region -->
+            <div class="form-group">
+              <fieldset>
+                <legend class="form-label-bold visuallyhidden">UK region</legend>
+                <!-- Event name -->
+                <div class="form-group">
+                  <label class="form-label-bold" for="webinar-url">UK region</label>
+                  <!-- <p class="form-hint"></p> -->
+                  <input type="text" class="form-control" id="webinar-url">
+                </div>
+
+              </fieldset>
+            </div>
+
+          </div>
+
+          <div class="panel panel-border-narrow js-hidden" id="event-overseas">
+
+            <!-- UK region -->
+            <div class="form-group">
+              <fieldset>
+                <legend class="form-label-bold visuallyhidden">UK region</legend>
+                <!-- Event name -->
+                <div class="form-group">
+                  <label class="form-label-bold" for="webinar-url">UK region</label>
+                  <!-- <p class="form-hint"></p> -->
+                  <input type="text" class="form-control" id="webinar-url">
+                </div>
+
+              </fieldset>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="related-programmes">Related programmes</label>
+          <select class="form-control" id="related-programmes">
+            <option>Related programme 1</option>
+            <option>Related programme 2</option>
+            <option>Related programme 3</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Save">
+          <a href="#">Cancel</a>
+        </div>
+
+      </main>
+
+      {% endblock %}
 
 
