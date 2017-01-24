@@ -1,0 +1,266 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% include "includes/phase_banner_demo.html" %}
+
+  {% include "includes/login_bar.html" %}
+
+
+  <h1 class="form-title heading-large">
+    Events
+  </h1>
+
+
+  <div class="container">
+
+    <div class="grid-row">
+      <div class="column-one-third">
+        <div class="filters">
+          <div>
+            <div id="facets" class="">
+              <h3 class="heading heading-small filter-title">Filter by:</h3>
+
+
+
+              <div class="govuk-option-select js-collapsible">
+                <div class="option-select-label">
+                  Search
+                  <span class="controls">
+                    <span class="clear-filter-button clear-filter-js">clear</span>
+                    <i class="collapse-filter collapse-filter-js fa fa-chevron-up"></i>
+                  </span>
+                </div>
+
+                <div class="options-container">
+                  <input type="text" class="event-textbox" />
+                </div>
+              </div>
+
+
+              <div class="govuk-option-select js-collapsible">
+                <div class="option-select-label">
+                  Status
+                  <span class="controls">
+                    <span class="clear-filter-button clear-filter-js">clear</span>
+                    <i class="collapse-filter collapse-filter-js fa fa-chevron-up"></i>
+                  </span>
+                </div>
+
+                <div class="options-container">
+                  <div class="js-auto-height-inner">
+
+                    <label class="facet-value-label">
+
+                      <input class="facet-option" name="doc_type" type="checkbox" value="company" checked>
+
+                      Active
+                    </label>
+
+                    <label class="facet-value-label">
+
+                      <input class="facet-option" name="doc_type" type="checkbox" value="company_contact">
+
+                      Archived
+                    </label>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="govuk-option-select js-collapsible">
+                <div class="option-select-label">
+                  Ownership
+                  <span class="controls">
+                    <span class="clear-filter-button clear-filter-js">clear</span>
+                    <i class="collapse-filter collapse-filter-js fa fa-chevron-up"></i>
+                  </span>
+                </div>
+
+                <div class="options-container">
+                  <div class="js-auto-height-inner">
+
+                    <label class="facet-value-label">
+
+                      <input class="facet-option" name="doc_type" type="checkbox" value="company">
+
+                      My events
+                    </label>
+
+                    <label class="facet-value-label">
+
+                      <input class="facet-option" name="doc_type" type="checkbox" value="company_contact">
+
+                      My team's events
+                    </label>
+
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="govuk-option-select js-collapsible">
+                <div class="option-select-label">
+                  Starts after
+                  <span class="controls">
+                    <span class="clear-filter-button clear-filter-js">clear</span>
+                    <i class="collapse-filter collapse-filter-js fa fa-chevron-up"></i>
+                  </span>
+                </div>
+
+                <div class="options-container">
+                  <input type="text" class="event-textbox" />
+                </div>
+                <div class="option-select-label">
+                  Starts before
+                  <span class="controls">
+                    <span class="clear-filter-button clear-filter-js">clear</span>
+                    <i class="collapse-filter collapse-filter-js fa fa-chevron-up"></i>
+                  </span>
+                </div>
+
+                <div class="options-container">
+                  <input type="text" class="event-textbox" />
+                </div>
+                <p style="font-size: smaller; margin-left: 5px;">For example, 2005 or 21/11/2104</p>
+              </div>
+
+
+              <div class="govuk-option-select js-collapsible">
+                <div class="option-select-label">
+                  Country
+                  <span class="controls">
+                    <span class="clear-filter-button clear-filter-js">clear</span>
+                    <i class="collapse-filter collapse-filter-js fa fa-chevron-up"></i>
+                  </span>
+                </div>
+
+                <div class="options-container">
+                  <input type="text" class="event-textbox" />
+                </div>
+
+              </div>
+
+
+              <div class="govuk-option-select js-collapsible">
+                <div class="option-select-label">
+                Sector
+                  <span class="controls">
+                    <span class="clear-filter-button clear-filter-js">clear</span>
+                    <i class="collapse-filter collapse-filter-js fa fa-chevron-up"></i>
+                  </span>
+                </div>
+
+                <div class="options-container">
+                  <div class="js-auto-height-inner">
+                    {% include "includes/sector_list.html" %}
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+            &nbsp;</div>
+
+          </div>
+        </div>
+        <div class="column-two-thirds">
+          <div class="button-bar button-bar--top">
+            <a class="button button-secondary" href="/add-new-event">
+              Add new event
+            </a>
+          </div>
+
+
+          <div id="result-summary" class="result-summary">
+            <span class="result-summary--result-count">
+              500 active</span> events
+            </div>
+            <ol class="results-list">
+              <li class="results-list__result">
+                <h3 class="result-title">
+                  <a href="/events/event/64fd501c-8a3b-48fb-877a-570802d9c2c6">H+H Cologne 2017</a>
+                </h3>
+                <p>
+                  <strong style="font-weight: bold;">Start date: </strong>
+                  <span style="display: inline-block; margin-right: 16px;">31 Mar 2017</span>
+                  <strong style="font-weight: bold;">Ref: </strong>
+                  <span style="display: inline-block; margin-right: 16px;">E130117-15</span>
+                  <strong style="font-weight: bold;">Status: </strong>
+                  <span style="display: inline-block; margin-right: 16px;">Active</span>
+                  <span>Exhibition</span>
+                  <span style="display: inline-block; margin-right: 16px;">Bio-economy Agri-tech</span>
+                  <span style="display: inline-block; margin-right: 16px;">Germany</span>
+
+                </p>
+
+              </li>
+
+
+
+              <li class="results-list__result">
+                <h3 class="result-title">
+                  <a href="#" onclick="return false">IPSEF Asia Forum - March 2017</a>
+                </h3>
+                <p>
+                  <strong style="font-weight: bold;">Start date: </strong>
+                  <span style="display: inline-block; margin-right: 16px;">16 Mar 2017</span>
+                  <strong style="font-weight: bold;">Ref: </strong>
+                  <span style="display: inline-block; margin-right: 16px;">E130117-03</span>
+                  <strong style="font-weight: bold;">Status: </strong>
+                  <span style="display: inline-block; margin-right: 16px;">Active</span>
+                  <span>Seminar</span>
+                  <span style="display: inline-block; margin-right: 16px;">Automotive</span>
+                  <span style="display: inline-block; margin-right: 16px;">Malaysia</span>
+
+                </p>
+
+              </li>
+
+
+              <li class="results-list__result">
+                <h3 class="result-title">
+                  <a href="#" onclick="return false">Cosmoprof Bologna 2017</a>
+                </h3>
+                <p>
+                  <strong style="font-weight: bold;">Start date: </strong>
+                  <span style="display: inline-block; margin-right: 16px;">31 Mar 2017</span>
+                  <strong style="font-weight: bold;">Ref: </strong>
+                  <span style="display: inline-block; margin-right: 16px;">E091216-62</span>
+                  <strong style="font-weight: bold;">Status: </strong>
+                  <span style="display: inline-block; margin-right: 16px;">Active</span>
+                  <span>Exhibition</span>
+                  <span style="display: inline-block; margin-right: 16px;">Bio-economy Agri-tech</span>
+                  <span style="display: inline-block; margin-right: 16px;">Italy</span>
+
+                </p>
+
+              </li>
+
+            </ol>
+
+          </div>
+        </div>
+        <div class="grid-row">
+          <div class="column-full">
+            <div class="pagination">
+              <div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+
+    </main>
+
+    {% endblock %}

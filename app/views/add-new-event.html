@@ -6,18 +6,16 @@ GOV.UK prototype kit
 
 {% block content %}
 
-
-
 <main id="content" role="main">
   {% include "includes/phase_banner_demo.html" %}
 
   {% include "includes/login_bar.html" %}
 
   <!-- {% include "includes/breadcrumb_examples.html" %} -->
-  <a href="#" class="link-back">Back to events list</a>
+  <!-- <a href="/events" class="link-back">Back to events list</a> -->
 
 
-  <form action="/docs/tutorials-and-examples" method="post" class="form">
+  <form action="#" method="post" class="form" onsubmit="return false">
 
     <h1 class="form-title heading-large">
       Add new event
@@ -34,9 +32,12 @@ GOV.UK prototype kit
     <div class="form-group">
       <label class="form-label-bold" for="event-type">Event type</label>
       <select class="form-control" id="event-type">
-        <option>Event type 1</option>
-        <option>Event type 2</option>
-        <option>Event type 3</option>
+        <option>Seminar</option>
+        <option>Outward mission</option>
+        <option>MVS</option>
+        <option>Exhibition</option>
+        <option>UK Region Local Serv</option>
+        <option>Inward mission</option>
       </select>
     </div>
 
@@ -255,9 +256,15 @@ GOV.UK prototype kit
         <div class="form-group">
           <label class="form-label" for="related-programmes">Related programmes</label>
           <select class="form-control" id="related-programmes">
-            <option>Related programme 1</option>
-            <option>Related programme 2</option>
-            <option>Related programme 3</option>
+            <option>Grown in Britain</option>
+            <option>GREAT branded</option>
+            <option>GREAT funded</option>
+            <option>GREAT challenge fund</option>
+            <option>Web based exporting programme</option>
+            <option>Olympics 2012 legacy</option>
+            <option>HVO team specialist contribution</option>
+            <option>UKTI low carbon programme</option>
+            <option>UKTI innovation programme</option>
           </select>
         </div>
 
@@ -265,7 +272,11 @@ GOV.UK prototype kit
           <input type="submit" class="button" value="Save">
           <a href="#">Cancel</a>
         </div>
-
+</fieldset>
+</div>
+</fieldset>
+</div>
+</form>
       </main>
 
       {% endblock %}

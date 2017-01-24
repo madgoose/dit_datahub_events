@@ -1,0 +1,107 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "includes/phase_banner_demo.html" %}
+
+	{% include "includes/login_bar.html" %}
+
+	<!-- {% include "includes/breadcrumb_examples.html" %} -->
+	<!-- <a href="/events" class="link-back">Back to events list</a> -->
+
+
+
+<h1 class="heading-xlarge record-title">
+	H+H Cologne 2017
+</h1>
+<div class="tabs tabs--inline">
+	<nav class="tabs-nav">
+		<ul class="tabs-list">
+			<li>
+				<a class="is-selected" href="#" onclick="return false">Details</a>
+			</li>
+			<li>
+				<a class="false" href="64fd501c-8a3b-48fb-877a-570802d9c2c6/service-deliveries/">
+					Service deliveries</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<div>
+		<div>
+
+			<table class="table-detail">
+				<tbody>
+					<tr>
+						<th>Event type</th>
+						<td>Exhibition</td>
+					</tr>
+					<tr>
+						<th>Reference number</th>
+						<td>E130117-15</td>
+					</tr>
+					<tr>
+						<th>Event start date</th>
+						<td>21 Mar 2017</td>
+					</tr>
+					<tr>
+						<th>Does event run for longer than 1 day?</th>
+						<td>No</td>
+						</tr>
+					<tr>
+						<th>Event notes</th>
+						<td>Tech start-ups focused, strong investor exposure</td>
+					</tr>
+					<tr>
+						<th>Is this event a webinar?</th>
+						<td>No</td>
+					</tr>
+					<tr>
+						<th>DIT team(s)</th>
+						<td>British Embassy Paris France, East Midlands Region (DR)</td>
+					</tr>
+					<tr>
+						<th>Is this event happening in the UK?</th>
+						<td>No, France</td>
+					</tr>
+					<tr>
+						<th>Related programmes</th>
+						<td>GREAT funded</td>
+					</tr>
+					<tr>
+						<th>Created on</th>
+						<td>13 Jan 2016</td>
+					</tr>
+					<tr>
+						<th>Created by</th>
+						<td><a href="#">Bobbie Smith</a></td>
+					</tr>
+					<tr>
+						<th>Updated on</th>
+						<td>02 Mar 2017</td>
+					</tr>
+					<tr>
+						<th>Updated by</th>
+						<td><a href="#">Lee Walker</a></td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="button-bar">
+				<div>
+					<a class="button button-primary js-button-edit" href="#">Edit event details</a>
+					<a class="button button-secondary" href="#">Archive event</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+</main>
+
+{% endblock %}

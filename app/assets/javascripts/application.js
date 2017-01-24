@@ -26,3 +26,7 @@ $(document).ready(function () {
   var showHideContent = new GOVUK.ShowHideContent()
   showHideContent.init()
 })
+
+$(".contact-table th").on("click", function() {
+  $(this).toggleClass(".asc desc");
+});

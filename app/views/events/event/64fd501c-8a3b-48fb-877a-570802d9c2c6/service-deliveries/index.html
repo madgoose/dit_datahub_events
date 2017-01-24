@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "includes/phase_banner_demo.html" %}
+
+	{% include "includes/login_bar.html" %}
+
+	<!-- {% include "includes/breadcrumb_examples.html" %} -->
+	<!-- <a href="/events" class="link-back">Back to events list</a> -->
+
+
+
+	<h1 class="heading-xlarge record-title">
+		H+H Cologne 2017
+	</h1>
+	<div class="tabs tabs--inline">
+		<nav class="tabs-nav">
+			<ul class="tabs-list">
+				<li>
+					<a class="false" href="../../64fd501c-8a3b-48fb-877a-570802d9c2c6.html">Details</a>
+				</li>
+				<li>
+					<a class="is-selected" href="#" onclick="return false">
+						Service deliveries</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+
+		<div>
+			<div>
+				<div class="grid-row">
+
+					<div class="column-full-width">
+						<p class="actions" style="text-align: right">
+							<a class="button button-secondary" href="#">Add new service delivery</a>
+						</p>
+					</div>
+				</div>
+				<table class="data-table contact-table" id="contact-table">
+					<thead>
+						<tr>
+							<th class="asc">Start date</th>
+							<th class="asc">Status</th>
+							<th class="asc">Subject</th>
+							<th class="asc">DIT Advisor</th>
+							<th class="asc">Company</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>18.12.2016</td>
+							<td>Current</td>
+							<td><a href="#">Meeting with companies</a></td>
+							<td><a href="#">John Lee</a></td>
+							<td><a href="#">Samsung UK</a></td>
+						</tr>
+						<tr>
+							<td>10.11.2016</td>
+							<td>Current</td>
+							<td><a href="#">Stand at Paris Tech Show</a></td>
+							<td><a href="#">Bobbie Smith</a></td>
+							<td><a href="#">Siemens Healthcare</a></td>
+						</tr>
+						<tr>
+							<td>23.04.2016</td>
+							<td>Completed</td>
+							<td><a href="#">Call to market the event</a></td>
+							<td><a href="#">Kelly Brown</a></td>
+							<td><a href="#">Siemens UK</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+	</main>
+
+	{% endblock %}

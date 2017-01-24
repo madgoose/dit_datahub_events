@@ -1,0 +1,399 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% include "includes/phase_banner_demo.html" %}
+
+  {% include "includes/login_bar.html" %}
+
+  <div class="container">
+
+
+    <form class="searchbar" action="/search" method="get" role="search">
+      <div class="searchbar__wrapper">
+        <label class="searchbar__label" for="search-term">Search companies and contacts</label>
+        <input class="searchbar__input form-control" id="search-term" type="search" name="term" value="cake" placeholder="Search companies and contacts">
+        <input class="searchbar__submit" type="submit" value="Search">
+      </div>
+    </form>
+
+
+    <div class="grid-row">
+      <div class="column-one-third">
+        <div class="filters">
+          <div>
+            <div id="facets" class="">
+              <h3 class="heading heading-small filter-title">Filter by:</h3>
+
+
+
+              <div class="govuk-option-select js-collapsible">
+                <div class="option-select-label">
+                  Category
+                  <span class="controls">
+                    <span class="clear-filter-button clear-filter-js">clear</span>
+                    <i class="collapse-filter collapse-filter-js fa fa-chevron-up"></i>
+                  </span>
+                </div>
+
+                <div class="options-container">
+                  <div class="js-auto-height-inner">
+
+                    <label class="facet-value-label">
+
+                      <input class="facet-option" name="doc_type" type="checkbox" value="company">
+
+                      Company
+                    </label>
+
+                    <label class="facet-value-label">
+
+                      <input class="facet-option" name="doc_type" type="checkbox" value="company_contact">
+
+                      Contact
+                    </label>
+
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+            &nbsp;</div>
+
+          </div>
+        </div>
+        <div class="column-two-thirds">
+          <div class="button-bar button-bar--top">
+            <a class="button button-secondary" href="/company/add">
+              Add new company
+            </a>
+          </div>
+
+
+          <div id="result-summary" class="result-summary">
+            <span class="result-summary--result-count">
+              120</span> results found containing
+              <span class="result-summary--result-query">cake
+              </span>
+            </div>
+            <ol class="results-list">
+
+
+
+
+              <li class="results-list__result result-list__ch" data_name="CELEBRATIONS CAKE ACCESSORIES LTD">
+                <h3 class="result-title">
+                  <a href="/company/company_company/6409398d-219f-4502-9333-0c3c2d824332?term=cake">CELEBRATIONS <strong>CAKE</strong> ACCESSORIES LTD</a>
+                </h3>
+
+
+                <div class="meta meta--ch">10031158 - Incorporated on </div>
+
+
+                <div class="meta meta--address">
+
+
+
+
+                </div>
+              </li>
+
+
+
+
+
+
+              <li class="results-list__result result-list__ch" data_name="AINTREE CAKE LIMITED">
+                <h3 class="result-title">
+                  <a href="/company/company_company/a5e4fb80-7daf-4ca6-9183-728c87a2b1d0?term=cake">AINTREE <strong>CAKE</strong> LIMITED</a>
+                </h3>
+
+
+                <div class="meta meta--ch">02292709 - Incorporated on </div>
+
+
+                <div class="meta meta--address">
+
+                  graylaw trading estate,
+
+
+                  waring road brookfield drive,
+
+
+                  aintree,
+
+
+                  <span class="meta--address__postcode">L9 7AU</span>
+
+                </div>
+              </li>
+
+
+
+
+
+              <li class="results-list__result result-list__contact">
+                <h3 class="result-title">
+                  <a href="/contact/5247ed3b-55f6-4211-a74f-d6e98f37dc7f?term=cake">
+                    <strong>Cake</strong> Maker
+                  </a>
+                </h3>
+                <div class="meta">AINTREE CAKE LIMITED</div>
+
+                <div class="meta meta--address">
+
+
+
+
+                </div>
+              </li>
+
+
+
+
+
+              <li class="results-list__result result-list__contact">
+                <h3 class="result-title">
+                  <a href="/contact/6482c870-a550-4db3-9f95-7367158bd92b?term=cake">
+                    <strong>Cake</strong> Man
+                  </a>
+                </h3>
+                <div class="meta">AINTREE CAKE LIMITED</div>
+
+                <div class="meta meta--address">
+
+
+
+
+                </div>
+              </li>
+
+
+
+
+
+
+              <li class="results-list__result result-list__ch" data_name="CELEBRATION CAKE CENTRE LTD">
+                <h3 class="result-title">
+                  <a href="/company/company_companieshousecompany/10335709?term=cake">CELEBRATION <strong>CAKE</strong> CENTRE LTD</a>
+                </h3>
+
+
+                <div class="meta meta--ch">10335709 - Incorporated on 18 August 2016</div>
+
+
+                <div class="meta meta--address">
+
+                  58 victoria st,
+
+
+                  victoria street,
+
+
+                  bristol,
+
+
+                  <span class="meta--address__postcode">BS1 6DE</span>
+
+                </div>
+              </li>
+
+
+
+
+
+
+              <li class="results-list__result result-list__ch" data_name="ALEX'S CAKE BOUTIQUE LIMITED">
+                <h3 class="result-title">
+                  <a href="/company/company_companieshousecompany/10332550?term=cake">ALEX'S <strong>CAKE</strong> BOUTIQUE LIMITED</a>
+                </h3>
+
+
+                <div class="meta meta--ch">10332550 - Incorporated on 16 August 2016</div>
+
+
+                <div class="meta meta--address">
+
+                  suite 2 rauter house sybron way,
+
+
+                  jarvis brook,
+
+
+                  crowborough,
+
+
+                  <span class="meta--address__postcode">TN6 3DZ</span>
+
+                </div>
+              </li>
+
+
+
+
+
+
+              <li class="results-list__result result-list__ch" data_name="A1 CAKE MIXES LIMITED">
+                <h3 class="result-title">
+                  <a href="/company/company_companieshousecompany/SC366755?term=cake">A1 <strong>CAKE</strong> MIXES LIMITED</a>
+                </h3>
+
+
+                <div class="meta meta--ch">SC366755 - Incorporated on 13 October 2009</div>
+
+
+                <div class="meta meta--address">
+
+                  79 kilwinning road,
+
+
+
+                  irvine,
+
+
+                  <span class="meta--address__postcode">KA12 8SU</span>
+
+                </div>
+              </li>
+
+
+
+
+
+
+              <li class="results-list__result result-list__ch" data_name="BESPOKE CAKE DESIGNS LIMITED">
+                <h3 class="result-title">
+                  <a href="/company/company_companieshousecompany/09601376?term=cake">BESPOKE <strong>CAKE</strong> DESIGNS LIMITED</a>
+                </h3>
+
+
+                <div class="meta meta--ch">09601376 - Incorporated on 20 May 2015</div>
+
+
+                <div class="meta meta--address">
+
+                  149 linthouse lane,
+
+
+
+                  wolverhampton,
+
+
+                  <span class="meta--address__postcode">WV11 3TW</span>
+
+                </div>
+              </li>
+
+
+
+
+
+
+              <li class="results-list__result result-list__ch" data_name="CHANCELLOR CAKE COMPANY LIMITED">
+                <h3 class="result-title">
+                  <a href="/company/company_companieshousecompany/08490541?term=cake">CHANCELLOR <strong>CAKE</strong> COMPANY LIMITED</a>
+                </h3>
+
+
+                <div class="meta meta--ch">08490541 - Incorporated on 16 April 2013</div>
+
+
+                <div class="meta meta--address">
+
+                  146 new london road,
+
+
+
+                  chelmsford,
+
+
+                  <span class="meta--address__postcode">CM2 0AW</span>
+
+                </div>
+              </li>
+
+
+
+
+
+
+              <li class="results-list__result result-list__ch" data_name="CHELSEA CAKE COMPANY LTD">
+                <h3 class="result-title">
+                  <a href="/company/company_companieshousecompany/08241988?term=cake">CHELSEA <strong>CAKE</strong> COMPANY LTD</a>
+                </h3>
+
+
+                <div class="meta meta--ch">08241988 - Incorporated on 5 October 2012</div>
+
+
+                <div class="meta meta--address">
+
+                  2 britannia way,
+
+
+
+                  london,
+
+
+                  <span class="meta--address__postcode">SW6 2HE</span>
+
+                </div>
+              </li>
+
+
+
+            </ol>
+
+
+
+
+          </div>
+        </div>
+        <div class="grid-row">
+          <div class="column-full">
+            <div class="pagination">
+              <div>
+
+
+                <div class="pagination__page">1</div>
+
+
+
+                <a href="/search?term=cake&amp;page=2" class="pagination__page">2</a>
+
+
+
+                <a href="/search?term=cake&amp;page=3" class="pagination__page">3</a>
+
+
+
+                <a href="/search?term=cake&amp;page=4" class="pagination__page">4</a>
+
+
+
+                <a href="/search?term=cake&amp;page=5" class="pagination__page">5</a>
+
+
+
+                <a href="/search?term=cake&amp;page=2" class="pagination__page">Next</a>
+
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+{% endblock %}
+
+
