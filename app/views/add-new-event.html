@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-GOV.UK prototype kit
+Data Hub prototype
 {% endblock %}
 
 {% block content %}
@@ -12,7 +12,7 @@ GOV.UK prototype kit
   {% include "includes/login_bar.html" %}
 
   <!-- {% include "includes/breadcrumb_examples.html" %} -->
-  <!-- <a href="/events" class="link-back">Back to events list</a> -->
+  <a href="/events" class="link-back">Back to events list</a>
 
 
   <form action="#" method="post" class="form" onsubmit="return false">
@@ -32,6 +32,7 @@ GOV.UK prototype kit
     <div class="form-group">
       <label class="form-label-bold" for="event-type">Event type</label>
       <select class="form-control" id="event-type">
+        <option></option>
         <option>Seminar</option>
         <option>Outward mission</option>
         <option>MVS</option>
@@ -51,8 +52,6 @@ GOV.UK prototype kit
 
         <div class="form-date">
 
-          <p class="form-hint">For example, 31 3 2017</p>
-
           <div class="form-group form-group-day">
             <label for="event-start-day">Day</label>
             <input class="form-control" id="event-start-day" type="number" pattern="[0-9]*" min="0" max="31">
@@ -68,7 +67,7 @@ GOV.UK prototype kit
             <input class="form-control" id="event-start-year" type="number" pattern="[0-9]*" min="0" max="2014">
           </div>
 
-          <a href="#" style="display:block; margin-top:60px;">Today's date</a>
+          <a href="#" class="button-populate-today">Today's date</a>
 
         </div>
 
@@ -113,20 +112,22 @@ GOV.UK prototype kit
                 <!-- <p class="form-hint">For example, 31 3 2017</p> -->
 
                 <div class="form-group form-group-day">
-                  <label for="event-end-day">Day</label>
-                  <input class="form-control" id="event-end-day" type="number" pattern="[0-9]*" min="0" max="31">
+                  <label for="event-end-day2">Day</label>
+                  <input class="form-control" id="event-end-day2" type="number" pattern="[0-9]*" min="0" max="31">
                 </div>
 
                 <div class="form-group form-group-month">
-                  <label for="event-end-month">Month</label>
-                  <input class="form-control" id="event-end-month" type="number" pattern="[0-9]*" min="0" max="12">
+                  <label for="event-end-month2">Month</label>
+                  <input class="form-control" id="event-end-month2" type="number" pattern="[0-9]*" min="0" max="12">
                 </div>
 
                 <div class="form-group form-group-year">
-                  <label for="event-end-year">Year</label>
-                  <input class="form-control" id="event-end-year" type="number" pattern="[0-9]*" min="0" max="2014">
+                  <label for="event-end-year2">Year</label>
+                  <input class="form-control" id="event-end-year2" type="number" pattern="[0-9]*" min="0" max="2014">
                 </div>
               </div>
+
+              <a href="#" onclick="return false">Today's date</a>
 
             </fieldset>
           </div>
@@ -187,7 +188,7 @@ GOV.UK prototype kit
       <div class="form-group">
         <label class="form-label-bold" for="event-teams">DIT team(s)</label>
         <!-- <p class="form-hint"></p> -->
-        <input type="text" class="form-control" id="event-teams" value="Your team name shown here">
+        <input type="text" class="form-control" id="event-teams" value="Events and marketing">
         <p>
           <a href="#">Add another team</a>
         </p>
@@ -239,10 +240,10 @@ GOV.UK prototype kit
             <!-- UK region -->
             <div class="form-group">
               <fieldset>
-                <legend class="form-label-bold visuallyhidden">UK region</legend>
+                <legend class="form-label-bold visuallyhidden">Country</legend>
                 <!-- Event name -->
                 <div class="form-group">
-                  <label class="form-label-bold" for="webinar-url">UK region</label>
+                  <label class="form-label-bold" for="webinar-url">Country</label>
                   <!-- <p class="form-hint"></p> -->
                   <input type="text" class="form-control" id="webinar-url">
                 </div>
@@ -254,8 +255,9 @@ GOV.UK prototype kit
         </div>
 
         <div class="form-group">
-          <label class="form-label" for="related-programmes">Related programmes</label>
+          <label class="form-label-bold" for="related-programmes">Related programmes</label>
           <select class="form-control" id="related-programmes">
+            <option></option>
             <option>Grown in Britain</option>
             <option>GREAT branded</option>
             <option>GREAT funded</option>
@@ -269,8 +271,8 @@ GOV.UK prototype kit
         </div>
 
         <div class="form-group">
-          <input type="submit" class="button" value="Save">
-          <a href="#">Cancel</a>
+          <a href="events/event/64fd501c-8a3b-48fb-877a-570802d9c2c6" class="button">Save</a>
+          <a href="/events">Cancel</a>
         </div>
 </fieldset>
 </div>

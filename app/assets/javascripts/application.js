@@ -5,9 +5,9 @@
 if (
   window.sessionStorage && window.sessionStorage.getItem('prototypeWarning') !== 'false' &&
   window.console && window.console.info
-) {
+  ) {
   window.console.info('GOV.UK Prototype Kit - do not use for production')
-  window.sessionStorage.setItem('prototypeWarning', true)
+window.sessionStorage.setItem('prototypeWarning', true)
 }
 
 $(document).ready(function () {
@@ -29,4 +29,26 @@ $(document).ready(function () {
 
 $(".contact-table th").on("click", function() {
   $(this).toggleClass(".asc desc");
+});
+
+$(".button-populate-today").on("click", function() {
+  var today = new Date();
+  var dd = today.getDate();
+  var mm = today.getMonth()+1; //January is 0!
+  var yyyy = today.getFullYear();
+
+  if(dd<10) {
+    dd='0'+dd
+  }
+
+  if(mm<10) {
+    mm='0'+mm
+  }
+
+  $("#event-start-day").val(dd);
+  $("#event-start-month").val(mm);
+  $("#event-start-year").val(yyyy);
+
+  return false;
+
 });

@@ -10,7 +10,7 @@
         "spec": "5.0.2",
         "type": "version"
       },
-      "/var/www/html/dit_datahub_events"
+      "/Users/dominic/Sites/root/dit/dit_datahub_events"
     ]
   ],
   "_from": "govuk_frontend_toolkit@5.0.2",
@@ -44,7 +44,7 @@
   "_shasum": "72cc68e166f41b6cb0f6eee2bf9a4e82439f7857",
   "_shrinkwrap": null,
   "_spec": "govuk_frontend_toolkit@5.0.2",
-  "_where": "/var/www/html/dit_datahub_events",
+  "_where": "/Users/dominic/Sites/root/dit/dit_datahub_events",
   "author": {
     "name": "Government Digital Service developers",
     "email": "govuk-dev@digital.cabinet-office.gov.uk"
